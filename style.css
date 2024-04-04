@@ -1,0 +1,118 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+}
+
+body{
+    background-color: #1f2232;
+}
+
+header {
+    width: 100%;
+    height: 75px; /* Adjust the height of the navbar */
+    display: flex;
+    justify-content: space-between; /* Distribute items along the main axis */
+    align-items: center;
+    padding: 0 20px; /* Add padding to the sides */
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height:160px; /* Set maximum height to 100% of the parent container */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for the list of links */
+}
+
+nav li {
+    padding: 0 20px;
+}
+
+a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fde8e9;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav li a:hover {
+    color: #e3bac6;
+    transition: all 0.4s ease 0s;
+}
+
+/* Push the logo to the left and the nav to the right */
+.logo {
+    order: 1; /* Set the logo to appear first */
+}
+
+nav {
+    order: 2; /* Set the nav to appear second */
+}
+
+/* Styling the about section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px; 
+}
+
+/* Styling the logo */
+
+
+/* Styling the about content */
+.about-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-content h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  font-family: 'Libre Baskerville',bold;
+  color: #fde8e9;
+}
+
+.about-content h1 span{
+    color: #e3bac6;
+}
+
+.about-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  color:#fde8e9;
+}
+
+.about-content p span{
+    color: #e3bac6;
+}
+
+.about-content button{
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid #e3bac6;
+    border-radius: 200px;
+    padding: 9px 25px;
+}
+
+.about-content button:hover {
+    background-color: #232634;
+}
+/* Styling the about image */
+.about-image {
+  flex: 0.5;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+}
