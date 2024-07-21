@@ -1,36 +1,40 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Raleway', sans-serif;
 }
 
-body{
+body {
     background-color: #1f2232;
 }
 
+h1 {
+
+    font-family: 'Libre Baskerville', serif;
+}
 header {
     width: 100%;
-    height: 75px; /* Adjust the height of the navbar */
+    height: 75px;
     display: flex;
-    justify-content: space-between; /* Distribute items along the main axis */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Add padding to the sides */
+    padding: 0 20px;
     background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img {
-    height:160px; /* Set maximum height to 100% of the parent container */
+    height: 160px;
     width: auto;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Use flexbox for the list of links */
+    display: flex;
 }
 
 nav li {
@@ -41,7 +45,6 @@ a {
     font-size: 16px;
     font-weight: 500;
     color: #fde8e9;
-    text-decoration: none;
     cursor: pointer;
 }
 
@@ -50,69 +53,147 @@ nav li a:hover {
     transition: all 0.4s ease 0s;
 }
 
-/* Push the logo to the left and the nav to the right */
 .logo {
-    order: 1; /* Set the logo to appear first */
+    order: 1;
 }
 
 nav {
-    order: 2; /* Set the nav to appear second */
+    order: 2;
 }
 
-/* Styling the about section */
-.about-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px; 
+/*Intro */
+.intro-text {
+    text-align: center;
+    color: #fde8e9;
+    animation: fadeInUp 2s ease-in-out;
 }
 
-/* Styling the logo */
-
-
-/* Styling the about content */
-.about-content {
-  flex: 1;
-  padding-right: 20px;
+.intro-text h1 {
+    font-size: 45px;
+    margin-top: 150px;
+    color: #fde8e9;
 }
 
-.about-content h1 {
-  font-size: 45px;
-  margin-bottom: 30px;
-  font-family: 'Libre Baskerville',bold;
-  color: #fde8e9;
+.intro-text h1 span {
+    color: #e3bac6;
+    font-family: 'Libre Baskerville', serif; 
 }
 
-.about-content h1 span{
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    margin-top: 0px; /* Adjust to ensure content is visible below fixed header */
+}
+
+.home-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.home-content p {
+    font-size: 25px;
+    line-height: 1.6;
+    color: #fde8e9;
+}
+
+.home-content p span {
     color: #e3bac6;
 }
 
-.about-content p {
-  font-size: 20px;
-  line-height: 1.6;
-  color:#fde8e9;
-}
-
-.about-content p span{
-    color: #e3bac6;
-}
-
-.about-content button{
+.home-content button {
     background: rgba(0, 0, 0, 0.1);
     border: 2px solid #e3bac6;
     border-radius: 200px;
     padding: 9px 25px;
 }
 
-.about-content button:hover {
+.home-content button:hover {
     background-color: #232634;
 }
-/* Styling the about image */
-.about-image {
-  flex: 0.5;
+
+.home-image {
+    flex: 0.5;
 }
 
-.about-image img {
-  max-width: 100%;
-  height: auto;
+.home-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* About Me Styling */
+
+.about-section {
+    text-align: center;
+    padding: 100px;
+    background-color: #1f2232;
+}
+
+.about-section h1 {
+    font-size: 45px;
+    margin-bottom: 75px;
+    color: #e3bac6;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #232634;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fde8e9;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e3bac6;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* parallax styling */
+
+.parallax {
+    height: 0px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1 {
+    background-image: url('cutehearts.gif'); /* Replace with your image */
+}
+
+.parallax2 {
+    background-image: url('path_to_your_image_2.jpg'); /* Replace with your image */
+}
+
+/* Text Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-text {
+    animation: fadeInUp 2s ease-in-out;
 }
