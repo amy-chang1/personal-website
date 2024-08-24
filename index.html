@@ -7,87 +7,66 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Boxicons Link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-
-    <!-- Google Font Link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">
-            <a href="#home-section">
-                <img src="amylogo-removebg-preview.png" alt="Amy Chang">
-            </a>
+    <!--Pop-up on website-->
+    <a href="#" onclick="openModal()">Visit Website</a>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>This website is a work in progress. Keep checking back for new updates!</p>
+            <button onclick="proceed()">Proceed to Website</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about-section">About Me</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+    </div>
+
+    <header class="header">
+        <a href="#home" class="logo">Amy
+        <span>Chang</span></a>
+
+        <!--<i class='bx bx-menu' id="menu-icon"></i> -->
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#fun">Fun</a>
+            <a href="#contact">Contact Me</a>
         </nav>
     </header>
 
-    <!--Parallax Section: Intro -->
-    <div class="parallax parallax1" id="home-section">
-        <div class="intro-text">
-            <h1>Hello! My name is <span>Amy</span></h1>
-        </div>
-    </div>
+    <script src="script.js"></script>
 
-    <!-- Parallax Section 1 -->
-    <div class="parallax parallax2"></div>
-
-    <!-- Home Section of Website -->
-    <div class="home-section" id="home-section">
+    <section class="home" id="home">
         <div class="home-content">
-            
-            <p>Welcome to my space :) I am an aspiring <span>data scientist</span> 
-                who recently graduated from the University of the West Indies with a <span>BSc. Computer Science</span>. 
-                I love cats, sushi and starbies. 
-                <br><br>What do you love? Let's get to know each other! 
+            <h1>Hi, It's <span>Amy</span></h1>
+            <h3 class="text-animation">I'm a <span></span></h3>
+            <p>
+                Welcome to my website! It is so nice to have you here :) 
+                You can learn more about my education, skills and just me in general.
+                Hope you enjoy your stay <3 Feel free to reach out to me or view my resume below!
             </p>
-            <br><br>
-            <button><a href="https://www.linkedin.com/in/amychang21/" target="_blank">Lets Connect!</a></button>
-        </div>
-        <div class="home-image">
-            <img src="cutegirl.gif" alt="Cute Girl GIF">
-        </div>
-    </div>
 
-    <!-- Parallax Section 2 -->
-    <div class="parallax parallax3">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/amychang21/" target="_blank" rel="noreferrer"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/amy-chang1" target="_blank" rel="noreferrer"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.instagram.com/_amz3/" target="_blank" rel="noreferrer"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://discordapp.com/users/ticklemypickle3" target="_blank" rel="noreferrer"><i class='bx bxl-discord-alt' ></i></a>
+            </div>
 
-    <!-- About me -->
-        <div class="about-section" id="about-section">
-            <h1 class="animate-text">So you want to learn more about me huh?</h1>
-            <div class="cards">
-                <div class="card">
-                    <h2>The Basics</h2>
-                    <p> Location: San Juan, Trinidad & Tobago <i class='bx bx-map'></i> </p>
-                    <br>
-                    <p> Age: 23 <i class='bx bx-child'></i></p>
-                </div>
-                <div class="card">
-                    <h2>Education</h2>
-                    <p>Bsc. Computer Science <i class='bx bxs-graduation'></i></p>
-                    <p>UWI, St. Augustine <i class='bx bx-map'></i></p>
-                </div>
-                <div class="card">
-                    <h2>Hobbies</h2>
-                    <p>Watching K-dramas <i class='bx bx-tv'></i></p>
-                    <p>Playing the guitar <i class='bx bxs-guitar-amp'></i></p>
-                </div>
+            <div class="btn-group">
+                <a href="Resume - Amy Chang.pdf" target="_blank" rel="noreferrer" class="btn">My resume</a>
+                <a href="#contact" class="btn">Contact</a>
             </div>
         </div>
-    </div>
-
+            <div class="home-img">
+                <img src="cutegirl.gif" alt=""> 
+            </div>
+    </section>
+    
 </body>
 </html>
