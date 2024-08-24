@@ -14,15 +14,27 @@
 <body>
 
     <!--Pop-up on website-->
-    <a href="#" onclick="openModal()">Visit Website</a>
-
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p>This website is a work in progress. Keep checking back for new updates!</p>
-            <button onclick="proceed()">Proceed to Website</button>
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p>This website is a work in progress. Keep checking back for new updates!</p>
+          <button onclick="closeModal()">Got it!</button>
         </div>
     </div>
+  
+    <script>
+        window.onload = function() {
+            openModal();
+        };
+  
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+  
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
 
     <header class="header">
         <a href="#home" class="logo">Amy
