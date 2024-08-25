@@ -1,5 +1,5 @@
 #Description
-## ⚠︎💗*A WORK IN PROGRESS*💗⚠︎
+⚠︎💗*A WORK IN PROGRESS*💗⚠︎
 This is my personal project to allow recruiters, friends and family to get to know me better. 
 
 #Features
